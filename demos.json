@@ -1,0 +1,20 @@
+{
+  "formatVersion": 1,
+  "snapshotDate": "2026-10-03",
+  "cpu": "R800",
+  "videoPlayersIncluded": false,
+  "demos": [
+    {"id":"3d-wireframe","title":"ワイヤーフレーム・正二十面体6個","file":"3d-wireframe/v9968-3d.rom","bytes":16384,"sha256":"3250535674aba3b4e94dee9e5f44f090ac0760a5cdadaf3be1a31d91b5c525a9","emulator":"openMSX","mapper":"Normal","screen":"5","status":"demo","controls":"自動回転"},
+    {"id":"3d-flatpolygon","title":"多面体・フラット描画とマスク透過","file":"3d-flatpolygon/v9968-flat.rom","bytes":16384,"sha256":"3bb1771fa993226cadcd4195520948ade0c333894bc830c7366d59d76d90c1f3","emulator":"openMSX","mapper":"Normal","screen":"8","status":"demo","controls":"カーソル: 回転／未入力で停止"},
+    {"id":"3d-texturecube","title":"テクスチャキューブ","file":"3d-texturecube/v9968-texturecube.rom","bytes":16384,"sha256":"3a00453eb16e8d1df7224fbff9e45b18a28925239ce9ecbee6deabbd50d62e98","emulator":"openMSX","mapper":"Normal","screen":"8","status":"demo","controls":"カーソル: 回転／Shift+カーソル: 移動"},
+    {"id":"palette-erode","title":"Palette Erode・円形の残像と収縮","file":"palette-erode/v9968-palette-erode.rom","bytes":16384,"sha256":"3bc3ccc6be72d2567a825a091e614bf251d0372b27537ae4dc7bcce7a7bd0327","emulator":"openMSX","mapper":"Normal","screen":"8","status":"demo","controls":"カーソルの新規押下: 移動速度の変更"},
+    {"id":"v9968-streaming","title":"RAM→VRAM転送ベンチ・生ROM","file":"v9968-streaming/v9968-streaming.rom","bytes":16384,"sha256":"5b335d006e478bfcdc2d09dedb0427c4d1b595ae25f2a237af76a30ca68f6dd1","emulator":"openMSX","mapper":"Normal","screen":"5","status":"benchmark-rom-only","controls":"鑑賞用ではありません。単独起動では画面と数値結果を表示しません"},
+    {"id":"geo3d-cube","title":"Geo3D・ワイヤーフレーム立方体","file":"geo3d-cube/GEO3D_CUBE.ROM","bytes":16384,"sha256":"1fe9c61fb130af4e4e00a9025cd238e4aca48ce8f1e9b23b3c28245b2a97c747","emulator":"blueMSX+","mapper":"Auto","screen":"5","status":"demo","controls":"SPACE: 停止／再開。左右: 角度変更"},
+    {"id":"geo3d-city","title":"Geo3D街並み・SCREEN 5","file":"geo3d-city/GEO3D_CITY.ROM","bytes":32768,"sha256":"5236a64358606fd9e411902c4cfa511f226b812f2a005149e24915f8ed64f574","emulator":"blueMSX+","mapper":"Auto","screen":"5","status":"demo","controls":"SPACE: カメラ停止／再開。左右: 経路位置変更。看板は停止中も動作"},
+    {"id":"geo3d-city-sc8","title":"Geo3D街並み・SCREEN 8","file":"geo3d-city-sc8/GEO3D_CITY_SC8.ROM","bytes":65536,"sha256":"d72b9a8ef5bb1054173569336e98074d765f08a20db8313bc7e037b903edfaab","emulator":"blueMSX+","mapper":"ASCII16","screen":"8","status":"demo","controls":"SPACE: カメラ停止／再開。左右: 経路位置変更。看板は停止中も動作"},
+    {"id":"geo3d-final-reality","title":"Geo Reality・メガデモ","file":"geo3d-final-reality/GEO_REALITY.ROM","bytes":1048576,"sha256":"c19ef74fad72d1be79ae10dbeabc906f2d8800839dae57842ecff11f07cf9ea2","emulator":"blueMSX+","mapper":"ASCII16","screen":"8","status":"demo","controls":"SPACE: 停止／再開。左右: FOVを4段階で変更。タイトル・宇宙船・工場・街・エンディング"},
+    {"id":"geo3d-dance","title":"Geo3Dダンス・床と背景付き","file":"geo3d-dance/GEO_DANCE.ROM","bytes":4194304,"sha256":"097f0173d85b81e5e48cd9874f084e5c2ea79c8a55624ada4f6c578fdc759d9c","emulator":"blueMSX+","mapper":"ASCII16","screen":"8","status":"demo","controls":"SPACE: 一時停止／再開。丹田固定・約39.5秒ループ"},
+    {"id":"geo3d-mesh-snake","title":"Geo3Dメッシュモーフィング・蛇","file":"geo3d-mesh-snake/GEO_SNAKE.ROM","bytes":131072,"sha256":"edf1472288449ca19eec34b648d77156e621c44da182c2c04f6daf59ab22ce1b","emulator":"blueMSX+","mapper":"ASCII16","screen":"8","status":"demo","controls":"SPACE: 一時停止／再開。停止中の左右: 経路位置を1段階移動"},
+    {"id":"paper-dance-2d","title":"Paper Dance 2D・骨格による画像変形","file":"paper-dance-2d/PAPER_DANCE.ROM","bytes":2097152,"sha256":"1b561b85fe17860a74f2c37c7cb253277841b9a820a07b55f2a76d348dfddde4","emulator":"blueMSX+","mapper":"ASCII16","screen":"8","status":"demo","controls":"SPACE: 一時停止／再開。約39.4秒の2Dダンスをループ"}
+  ]
+}

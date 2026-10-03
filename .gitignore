@@ -1,0 +1,4 @@
+.local/
+*.log
+Thumbs.db
+Desktop.ini

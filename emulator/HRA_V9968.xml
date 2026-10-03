@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE msxconfig SYSTEM 'msxconfig2.dtd'>
+<msxconfig>
+  <info>
+    <name>tangnano20k_vdp_cartridge_rev2</name>
+    <manufacturer>HRA!</manufacturer>
+    <code>V9968</code>
+    <release_year>2025</release_year>
+    <description>V9968 expansion cartridge</description>
+    <type>graphics expansion</type>
+  </info>
+  <devices>
+    <VDP id="External V9968">
+      <version>V9968</version>
+      <vram>256</vram>
+      <io base="0x88" num="5" type="O"/>
+      <io base="0x88" num="5" type="I"/>
+      <timing>0</timing>
+    </VDP>
+  </devices>
+</msxconfig>

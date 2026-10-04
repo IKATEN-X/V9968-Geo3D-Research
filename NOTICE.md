@@ -4,7 +4,7 @@
 
 ## 街並みデモの動画看板
 
-対象: `geo3d-city/GEO3D_CITY.ROM`、`geo3d-city-sc8/GEO3D_CITY_SC8.ROM`。
+対象: `geo3d-city/GEO3D_CITY.ROM`、`geo3d-city-sc8/GEO3D_CITY_SC8.ROM`、`geo3d-city-z80/GEO3D_CITY_Z80.ROM`、`geo3d-city-sc8-z80/GEO3D_CITY_SC8_Z80.ROM`。
 
 作品: Caminandes: Llamigos — Blender Foundation / Blender Institute。
 

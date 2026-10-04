@@ -1,14 +1,16 @@
 # V9968 + Geo3D Research
 
-R800＋V9968／Geo3Dの表現と性能を探るデモの、実行用ROMだけをまとめた配布用スナップショットです。2026-10-03時点の12本を収録しています。Geo RealityはFOV切り替え対応版、Geo3Dダンスは床と背景を追加した版です。
+V9968／Geo3Dの表現と性能を探るデモの、実行用ROMをまとめた配布用スナップショットです。2026-10-04時点でR800版12本とZ80版7本、計19本を収録しています。Geo RealityはFOV切り替え対応版、Geo3Dダンスは床と背景を追加した版です。
 
-**収録した12本はすべて内蔵V9968（VDPポート98h～9Ch）構成を基準とした配布版です。** 外付けVDP専用版は収録していません。ROMに外付けVDPの検出処理がある場合も、このパッケージの動作確認・起動手順は内蔵VDPを対象とします。
+**R800版12本は内蔵V9968（VDPポート98h～9Ch）構成を基準とした配布版です。** 追加したZ80版7本は、Geo3D対応openMSXの内蔵98h系と外付け88h系の両方で動作確認したROMです。外付け専用の別ROMではなく、起動時にポートを選びます。実機での速度・動作は未検証です。
 
 このフォルダ全体をコピーすれば、元の開発フォルダを参照せずに使用できます。モデル、テクスチャ、骨格の姿勢データなど、ROMデモに必要なデータは各ROMに収録済みです。Node.js、アセンブラ、ソース、元動画、CSVは起動に不要です。
 
 エミュレーター本体、MSX BIOS／システムROM、マシンデータは含みません。別途、下記の対応エミュレーターを用意してください。
 
 ## 収録内容
+
+### R800版（12本）
 
 | ID | 内容 | エミュレーター |
 |---|---|---|
@@ -25,6 +27,18 @@ R800＋V9968／Geo3Dの表現と性能を探るデモの、実行用ROMだけを
 | `geo3d-mesh-snake` | テクスチャ付き蛇のメッシュ変形・8の字移動 | Geo3D対応blueMSX+ |
 | `paper-dance-2d` | 骨格データによる1枚絵の2Dダンス変形 | Geo3D対応blueMSX+ |
 
+### Z80版（7本）
+
+| ID | 内容 | エミュレーター |
+|---|---|---|
+| `geo3d-cube-z80` | 回転するGeo3D立方体・SCREEN 5 | Geo3D対応openMSX |
+| `geo3d-city-z80` | 街並み・SCREEN 5・4コマ看板 | Geo3D対応openMSX |
+| `geo3d-city-sc8-z80` | 街並み・SCREEN 8・4コマ看板 | Geo3D対応openMSX |
+| `geo3d-final-reality-z80` | Geo Realityメガデモ | Geo3D対応openMSX |
+| `geo3d-dance-z80` | 丹田固定の3Dダンス・床と夜景 | Geo3D対応openMSX |
+| `geo3d-mesh-snake-z80` | テクスチャ付き蛇・8の字経路 | Geo3D対応openMSX |
+| `paper-dance-2d-z80` | 骨格データによる1枚絵の2Dダンス変形 | Geo3D対応openMSX |
+
 `v9968-streaming` は動画再生ROMではありません。単独起動すると裏ページへ転送するため基本的に画面は空で、数値結果も表示しません。測定には開発版の計測ハーネスが必要です。この配布にはROMの保存用として収録しています。
 
 メタボール試作は配布対象外です。動画プレイヤーのCOM、変換済み動画、Nextorディスクは現段階では含めていません。PC用骨格プレビュー、旧デバッグ／比較ROM、テスト、スクリーンショット、個人設定も除外しています。
@@ -36,7 +50,7 @@ PowerShellでこのフォルダを開き、一覧と操作方法を確認でき�
 ```powershell
 .\run.ps1 -List
 (Get-Content .\demos.json -Raw -Encoding UTF8 | ConvertFrom-Json).demos |
-    Select-Object id,controls
+    Select-Object id,cpu,controls
 ```
 
 Geo3D対応blueMSX+を指定して起動する例：
@@ -55,13 +69,22 @@ V9968版openMSXを指定して起動する例：
 .\run.ps1 -Demo palette-erode -Emulator 'C:\openMSX-V9968\openmsx.exe'
 ```
 
+Z80版は**Geo3D対応版openMSX**で、Z80のMSX2/2+・V9968・Geo3Dを備えた機種を選んでROMを読み込めます。手動で読み込む場合、`geo3d-cube-z80`と`geo3d-city-z80`は通常ROM（`Normal`）、残る5本は`ASCII16`を指定してください。内蔵構成はGeo3D拡張`geo3d`、外付け構成は`HRA_V9968`と`geo3d88`を使用します。外付けでは映像ソースも`V9968`へ切り替えます。
+
+Z80版用の起動補助も使用できます。`-CbiosDirectory`には、3個のC-BIOS MSX2 ROMがあるフォルダを指定します。検証後、このリポジトリのGit対象外`.local`へだけコピーします。C-BIOS ROM本体は配布していません。
+
+```powershell
+.\run.ps1 -Demo geo3d-cube-z80 -Emulator 'D:\openmsx-21.0\openmsx.exe' -CbiosDirectory 'D:\blueMSX+\Machines\MSX2 - C-BIOS'
+.\run.ps1 -Demo paper-dance-2d-z80 -Emulator 'D:\openmsx-21.0\openmsx.exe' -CbiosDirectory 'D:\blueMSX+\Machines\MSX2 - C-BIOS' -External
+```
+
 エミュレーターの場所はご自身の配置先へ変更してください。実行前にROMの容量とSHA-256を検査します。`-DryRun` を付けると引数・パスの確認だけを行い、起動、設定ファイル作成、環境変数の変更をしません。ランチャーにビルドやダウンロード処理はありません。
 
-openMSXの既定機種は内蔵VDPの `Panasonic_FS-A1ST(V9968)` です。エミュレーターの隣に対応する `share` ディレクトリが必要です。ランチャーには外付けVDPを試す `-External` オプションもありますが、この配布版の動作確認対象外です。外付け用の定義と映像切替用Tclは `emulator` に同梱しています。
+R800版のopenMSXデモの既定機種は内蔵VDPの `Panasonic_FS-A1ST(V9968)` です。Z80版Geo3Dの既定機種は内蔵用`C-BIOS_MSX2_V9968`、`-External`では外付け用`C-BIOS_MSX2_Z80`です。エミュレーターの隣に対応する`share`ディレクトリが必要です。機種定義、外付けVDP定義、映像切替用Tclは`emulator`に同梱しています。
 
-Geo3Dは `MSXturboR - Panasonic FS-A1ST(V9968)` を使用します。エミュレーターの隣に `Machines` ディレクトリが必要です。通常のblueMSXやopenMSXではGeo3Dは動きません。街SC8／メガデモ／各ダンス／蛇はASCII16を指定し、立方体／街SC5は従来どおり自動検出にします。Geo3Dダンスは4MiB・256バンク、2Dダンスは2MiB・128バンク対応が必要です。
+R800版Geo3DはGeo3D対応blueMSX+の`MSXturboR - Panasonic FS-A1ST(V9968)`を使用します。エミュレーターの隣に`Machines`ディレクトリが必要です。標準版のblueMSXやopenMSXではGeo3Dは動きません。R800版では街SC8／メガデモ／各ダンス／蛇はASCII16、立方体／街SC5は自動検出を使います。Z80版は上記のNormal／ASCII16指定に従ってください。
 
-Geo3Dの外付け88h構成は、このエミュレーター環境では未検証・未対応なのでランチャーの `-External` では起動しません。実機の速度と動作も保証するものではありません。R800を基本対象とし、Z80互換性は保証しません。
+R800版Geo3Dの外付け88h構成は、この配布版では未検証・未対応です。Z80版7本は内蔵98h系と外付け88h系の両方をGeo3D対応openMSXで確認しました。ただし実機の速度・動作は保証しません。
 
 起動後に作られる設定、クイックセーブ等はこのフォルダの `.local` に保存し、Git対象外にしています。開発版やエミュレーター本体の設定は書き換えません。
 

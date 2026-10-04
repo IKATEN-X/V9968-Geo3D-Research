@@ -10,7 +10,7 @@
     <type>graphics expansion</type>
   </info>
   <devices>
-    <VDP id="External V9968">
+    <VDP id="V9968">
       <version>V9968</version>
       <vram>256</vram>
       <io base="0x88" num="5" type="O"/>

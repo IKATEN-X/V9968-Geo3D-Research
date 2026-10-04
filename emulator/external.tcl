@@ -1,3 +1,5 @@
 after realtime 0.5 {
-    set videosource {External V9968}
+    foreach source {{External V9968} V9968} {
+        if {![catch {set videosource $source}]} {break}
+    }
 }

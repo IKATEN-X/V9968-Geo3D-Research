@@ -1,6 +1,6 @@
 {
   "formatVersion": 1,
-  "snapshotDate": "2026-10-04",
+  "snapshotDate": "2026-10-06",
   "cpu": "mixed",
   "videoPlayersIncluded": false,
   "demos": [
@@ -22,6 +22,8 @@
     {"id":"geo3d-final-reality-z80","cpu":"Z80","title":"Geo Realityメガデモ・Z80","file":"geo3d-final-reality-z80/GEO_REALITY_Z80.ROM","bytes":1048576,"sha256":"bde9970065b2b6b16c45a859e447481e1a7961d34dd1717f866152c88e6996e0","emulator":"openMSX-Geo3D","mapper":"ASCII16","screen":"8","status":"demo","controls":"SPACE: 停止／再開。左右: FOVを4段階で変更"},
     {"id":"geo3d-dance-z80","cpu":"Z80","title":"Geo3Dダンス・Z80","file":"geo3d-dance-z80/GEO_DANCE_Z80.ROM","bytes":4194304,"sha256":"d8c0ce85a7280e654e71ce197c32741f56512ff30fbbe955c26a6ca691756bc1","emulator":"openMSX-Geo3D","mapper":"ASCII16","screen":"8","status":"demo","controls":"SPACE: 一時停止／再開。約39.5秒のダンスをループ"},
     {"id":"geo3d-mesh-snake-z80","cpu":"Z80","title":"Geo3Dメッシュモーフィング・蛇・Z80","file":"geo3d-mesh-snake-z80/GEO_SNAKE_Z80.ROM","bytes":131072,"sha256":"0c4fb4d6eeca199bac2c65ecbbeb6c9a5a9e3c5aefd205e6db9377498c6d56a1","emulator":"openMSX-Geo3D","mapper":"ASCII16","screen":"8","status":"demo","controls":"SPACE: 一時停止／再開。停止中の左右: 経路位置を1段階移動"},
-    {"id":"paper-dance-2d-z80","cpu":"Z80","title":"Paper Dance 2D・Z80","file":"paper-dance-2d-z80/PAPER_DANCE_Z80.ROM","bytes":2097152,"sha256":"d39a414c087cb5e5b9a1107e4338c2b7573efbadaf36b5df81d2b6a7d99221bb","emulator":"openMSX-Geo3D","mapper":"ASCII16","screen":"8","status":"demo","controls":"SPACE: 一時停止／再開。約39.4秒の2Dダンスをループ"}
+    {"id":"paper-dance-2d-z80","cpu":"Z80","title":"Paper Dance 2D・Z80","file":"paper-dance-2d-z80/PAPER_DANCE_Z80.ROM","bytes":2097152,"sha256":"d39a414c087cb5e5b9a1107e4338c2b7573efbadaf36b5df81d2b6a7d99221bb","emulator":"openMSX-Geo3D","mapper":"ASCII16","screen":"8","status":"demo","controls":"SPACE: 一時停止／再開。約39.4秒の2Dダンスをループ"},
+    {"id":"geo3d-a1st-z80","cpu":"Z80","title":"FS-A1ST写真テクスチャー・Z80・SCREEN 5","file":"geo3d-a1st-z80/GEO3D_A1ST_Z80.ROM","bytes":65536,"sha256":"b75ef1f6056c84f3c02a3d32ea137d1ddf6e60493a6036503cce62a0e324348a","emulator":"blueMSX+","mapper":"ASCII16","screen":"5","status":"build-verified","controls":"左右: 水平回転、上下: 垂直回転、Shift+上下: 拡大縮小、SPACE: 自動／手動"},
+    {"id":"geo3d-a1st-sc8-z80","cpu":"Z80","title":"FS-A1ST写真テクスチャー・Z80・SCREEN 8","file":"geo3d-a1st-sc8-z80/GEO3D_A1ST_SC8_Z80.ROM","bytes":131072,"sha256":"5a2bab40901a7d99a2ba28008e0ea683e85bbe2de26efb360f40f9db598159d9","emulator":"blueMSX+","mapper":"ASCII16","screen":"8","status":"demo","controls":"左右: 水平回転、上下: 垂直回転、Shift+上下: 拡大縮小、SPACE: 自動／手動"}
   ]
 }

@@ -1,8 +1,8 @@
 # V9968 + Geo3D Research
 
-V9968／Geo3Dの表現と性能を探るデモの、実行用ROMをまとめた配布用スナップショットです。2026-10-06時点でR800版12本とZ80版9本、計21本を収録しています。Geo RealityはFOV切り替え対応版、Geo3Dダンスは床と背景を追加した版です。
+V9968／Geo3Dの表現と性能を探るデモの、実行用ROMをまとめた配布用スナップショットです。2026-10-09時点でR800版14本とZ80版11本、計25本を収録しています。Geo RealityはFOV切り替え対応版、Geo3Dダンスは床と背景を追加した版です。
 
-**R800版12本は内蔵V9968（VDPポート98h～9Ch）構成を基準とした配布版です。** 従来のZ80版7本は、Geo3D対応openMSXの内蔵98h系と外付け88h系の両方で動作確認したROMです。今回追加したA1ST Z80版2本は起動時のポート選択を実装していますが、SC8の内蔵構成のみblueMSX+で表示確認済みです。SC5の実画面とA1ST版の外付け構成は未検証です。実機での速度・動作も未検証です。
+**従来のR800版12本は内蔵V9968（VDPポート98h～9Ch）構成を基準とした配布版です。** 今回追加したF1XD R800版2本は外付け88h優先・内蔵98hフォールバックを実装し、SC5・SC8の内蔵構成をblueMSX+で表示確認済みです。従来のZ80版7本は、Geo3D対応openMSXの内蔵98h系と外付け88h系の両方で動作確認したROMです。A1ST Z80版2本はSC8の内蔵構成のみblueMSX+で表示確認済みです。F1XD Z80版2本はSC5・SC8の内蔵構成をblueMSX+で表示確認済みです。A1ST Z80版のSC5実画面、F1XD・A1STの外付け構成、および実機での速度・動作は未検証です。
 
 このフォルダ全体をコピーすれば、元の開発フォルダを参照せずに使用できます。モデル、テクスチャ、骨格の姿勢データなど、ROMデモに必要なデータは各ROMに収録済みです。Node.js、アセンブラ、ソース、元動画、CSVは起動に不要です。
 
@@ -10,7 +10,7 @@ V9968／Geo3Dの表現と性能を探るデモの、実行用ROMをまとめた�
 
 ## 収録内容
 
-### R800版（12本）
+### R800版（14本）
 
 | ID | 内容 | エミュレーター |
 |---|---|---|
@@ -26,8 +26,10 @@ V9968／Geo3Dの表現と性能を探るデモの、実行用ROMをまとめた�
 | `geo3d-dance` | 丹田固定のダンス・グリッド床と夜景 | Geo3D対応blueMSX+ |
 | `geo3d-mesh-snake` | テクスチャ付き蛇のメッシュ変形・8の字移動 | Geo3D対応blueMSX+ |
 | `paper-dance-2d` | 骨格データによる1枚絵の2Dダンス変形 | Geo3D対応blueMSX+ |
+| `geo3d-f1xd` | HB-F1XD写真テクスチャー・SC5（表示確認済み） | Geo3D対応blueMSX+ |
+| `geo3d-f1xd-sc8` | HB-F1XD写真テクスチャー・SC8（表示確認済み） | Geo3D対応blueMSX+ |
 
-### Z80版（9本）
+### Z80版（11本）
 
 | ID | 内容 | エミュレーター |
 |---|---|---|
@@ -40,6 +42,8 @@ V9968／Geo3Dの表現と性能を探るデモの、実行用ROMをまとめた�
 | `paper-dance-2d-z80` | 骨格データによる1枚絵の2Dダンス変形 | Geo3D対応openMSX |
 | `geo3d-a1st-z80` | FS-A1ST写真テクスチャー・SC5（ビルド検証済み） | Geo3D対応blueMSX+ |
 | `geo3d-a1st-sc8-z80` | FS-A1ST写真テクスチャー・SC8（表示確認済み） | Geo3D対応blueMSX+ |
+| `geo3d-f1xd-z80` | HB-F1XD写真テクスチャー・SC5（表示確認済み） | Geo3D対応blueMSX+ |
+| `geo3d-f1xd-sc8-z80` | HB-F1XD写真テクスチャー・SC8（表示確認済み） | Geo3D対応blueMSX+ |
 
 `v9968-streaming` は動画再生ROMではありません。単独起動すると裏ページへ転送するため基本的に画面は空で、数値結果も表示しません。測定には開発版の計測ハーネスが必要です。この配布にはROMの保存用として収録しています。
 
@@ -61,6 +65,8 @@ Geo3D対応blueMSX+を指定して起動する例：
 .\run.ps1 -Demo geo3d-mesh-snake -Emulator 'D:\blueMSX+\blueMSX+.exe'
 .\run.ps1 -Demo paper-dance-2d -Emulator 'D:\blueMSX+\blueMSX+.exe'
 .\run.ps1 -Demo geo3d-a1st-sc8-z80 -Emulator 'D:\blueMSX+\blueMSX+.exe'
+.\run.ps1 -Demo geo3d-f1xd-sc8 -Emulator 'D:\blueMSX+\blueMSX+.exe'
+.\run.ps1 -Demo geo3d-f1xd-sc8-z80 -Emulator 'D:\blueMSX+\blueMSX+.exe'
 ```
 
 V9968版openMSXを指定して起動する例：
@@ -70,7 +76,7 @@ V9968版openMSXを指定して起動する例：
 .\run.ps1 -Demo palette-erode -Emulator 'C:\openMSX-V9968\openmsx.exe'
 ```
 
-従来のZ80版7本は**Geo3D対応版openMSX**で、Z80のMSX2/2+・V9968・Geo3Dを備えた機種を選んでROMを読み込めます。手動で読み込む場合、`geo3d-cube-z80`と`geo3d-city-z80`は通常ROM（`Normal`）、それ以外は`ASCII16`を指定してください。内蔵構成はGeo3D拡張`geo3d`、外付け構成は`HRA_V9968`と`geo3d88`を使用します。外付けでは映像ソースも`V9968`へ切り替えます。A1ST Z80版はblueMSX+のturboR構成でZ80モードへ切り替えて動作します。openMSXでのA1ST版は未確認です。
+従来のZ80版7本は**Geo3D対応版openMSX**で、Z80のMSX2/2+・V9968・Geo3Dを備えた機種を選んでROMを読み込めます。手動で読み込む場合、`geo3d-cube-z80`と`geo3d-city-z80`は通常ROM（`Normal`）、それ以外は`ASCII16`を指定してください。内蔵構成はGeo3D拡張`geo3d`、外付け構成は`HRA_V9968`と`geo3d88`を使用します。外付けでは映像ソースも`V9968`へ切り替えます。A1ST／F1XD Z80版はblueMSX+のturboR構成でZ80モードへ切り替える設計です。openMSXでのA1ST／F1XD版は未確認です。
 
 Z80版用の起動補助も使用できます。`-CbiosDirectory`には、3個のC-BIOS MSX2 ROMがあるフォルダを指定します。検証後、このリポジトリのGit対象外`.local`へだけコピーします。C-BIOS ROM本体は配布していません。
 
@@ -85,7 +91,7 @@ R800版のopenMSXデモの既定機種は内蔵VDPの `Panasonic_FS-A1ST(V9968)`
 
 R800版Geo3DはGeo3D対応blueMSX+の`MSXturboR - Panasonic FS-A1ST(V9968)`を使用します。エミュレーターの隣に`Machines`ディレクトリが必要です。標準版のblueMSXやopenMSXではGeo3Dは動きません。R800版では街SC8／メガデモ／各ダンス／蛇はASCII16、立方体／街SC5は自動検出を使います。Z80版は上記のNormal／ASCII16指定に従ってください。
 
-R800版Geo3Dの外付け88h構成は、この配布版では未検証・未対応です。従来のZ80版7本は内蔵98h系と外付け88h系の両方をGeo3D対応openMSXで確認しました。A1ST Z80版2本は上記の検証状況に限ります。実機の速度・動作は保証しません。
+従来のR800版Geo3Dの外付け88h構成は、この配布版では未検証・未対応です。F1XD版はR800・Z80とも外付け88hの検出処理を備えていますが、外付け表示は未確認です。従来のZ80版7本は内蔵98h系と外付け88h系の両方をGeo3D対応openMSXで確認しました。A1ST Z80版2本は上記の検証状況に限ります。実機の速度・動作は保証しません。
 
 起動後に作られる設定、クイックセーブ等はこのフォルダの `.local` に保存し、Git対象外にしています。開発版やエミュレーター本体の設定は書き換えません。
 
@@ -93,6 +99,6 @@ R800版Geo3Dの外付け88h構成は、この配布版では未検証・未対�
 
 このフォルダにはGitリポジトリと `LICENSE` が設定されています。外部素材には、リポジトリの設定とは別に素材ごとの利用条件が適用されます。
 
-街並み看板、ダンスの動き、A1ST写真テクスチャーの素材情報は [NOTICE.md](NOTICE.md) に記録しています。両ダンスで使う骨格データの推論元は[動画ACの動画6876](https://video-ac.com/video/6876)で、動画ACはクレジット表記不要と案内しています。ただし利用規約上の組込み・頒布条件は別の確認事項です。`.local` やエミュレーター／BIOS／OSを追加して公開しないでください。
+街並み看板、ダンスの動き、A1ST／F1XD写真テクスチャーの素材情報は [NOTICE.md](NOTICE.md) に記録しています。両ダンスで使う骨格データの推論元は[動画ACの動画6876](https://video-ac.com/video/6876)で、動画ACはクレジット表記不要と案内しています。ただし利用規約上の組込み・頒布条件は別の確認事項です。F1XDのBlenderファイル・元写真・変換コードは同梱せず、ROMのみ収録しています。`.local` やエミュレーター／BIOS／OSを追加して公開しないでください。
 
 各ROMは元の正式な起動スクリプトが選ぶ生成物をそのままコピーしてあり、`demos.json` に容量とSHA-256を記録しています。今後ROMを差し替える場合は、対応する記録も更新してください。

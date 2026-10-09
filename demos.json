@@ -1,6 +1,6 @@
 {
   "formatVersion": 1,
-  "snapshotDate": "2026-10-06",
+  "snapshotDate": "2026-10-09",
   "cpu": "mixed",
   "videoPlayersIncluded": false,
   "demos": [
@@ -16,6 +16,8 @@
     {"id":"geo3d-dance","cpu":"R800","title":"Geo3Dダンス・床と背景付き","file":"geo3d-dance/GEO_DANCE.ROM","bytes":4194304,"sha256":"097f0173d85b81e5e48cd9874f084e5c2ea79c8a55624ada4f6c578fdc759d9c","emulator":"blueMSX+","mapper":"ASCII16","screen":"8","status":"demo","controls":"SPACE: 一時停止／再開。丹田固定・約39.5秒ループ"},
     {"id":"geo3d-mesh-snake","cpu":"R800","title":"Geo3Dメッシュモーフィング・蛇","file":"geo3d-mesh-snake/GEO_SNAKE.ROM","bytes":131072,"sha256":"edf1472288449ca19eec34b648d77156e621c44da182c2c04f6daf59ab22ce1b","emulator":"blueMSX+","mapper":"ASCII16","screen":"8","status":"demo","controls":"SPACE: 一時停止／再開。停止中の左右: 経路位置を1段階移動"},
     {"id":"paper-dance-2d","cpu":"R800","title":"Paper Dance 2D・骨格による画像変形","file":"paper-dance-2d/PAPER_DANCE.ROM","bytes":2097152,"sha256":"1b561b85fe17860a74f2c37c7cb253277841b9a820a07b55f2a76d348dfddde4","emulator":"blueMSX+","mapper":"ASCII16","screen":"8","status":"demo","controls":"SPACE: 一時停止／再開。約39.4秒の2Dダンスをループ"},
+    {"id":"geo3d-f1xd","cpu":"R800","title":"HB-F1XD写真テクスチャー・SCREEN 5","file":"geo3d-f1xd/GEO3D_F1XD.ROM","bytes":65536,"sha256":"29f1b53bf8fdd47e8945d2a2fe5a2ca2b08cf1b3758fa27a0d50b20759b96087","emulator":"blueMSX+","mapper":"ASCII16","screen":"5","status":"demo","controls":"左右: 水平回転、上下: 垂直回転、Shift+上下: 拡大縮小、SPACE: 自動／手動"},
+    {"id":"geo3d-f1xd-sc8","cpu":"R800","title":"HB-F1XD写真テクスチャー・SCREEN 8","file":"geo3d-f1xd-sc8/GEO3D_F1XD_SC8.ROM","bytes":131072,"sha256":"9a3d82e00fcb0070f3f5ed4591092182282fe2a976e89d9f9186c2e9c7c78ba0","emulator":"blueMSX+","mapper":"ASCII16","screen":"8","status":"demo","controls":"左右: 水平回転、上下: 垂直回転、Shift+上下: 拡大縮小、SPACE: 自動／手動"},
     {"id":"geo3d-cube-z80","cpu":"Z80","title":"Geo3D立方体・Z80","file":"geo3d-cube-z80/GEO3D_CUBE_Z80.ROM","bytes":16384,"sha256":"c7b7519d77d596062672ee9f466198de85adbc8d50a67990b75caf568b646046","emulator":"openMSX-Geo3D","mapper":"Normal","screen":"5","status":"demo","controls":"SPACE: 回転停止／再開。左右: 角度変更"},
     {"id":"geo3d-city-z80","cpu":"Z80","title":"Geo3D街並み・Z80・SCREEN 5","file":"geo3d-city-z80/GEO3D_CITY_Z80.ROM","bytes":32768,"sha256":"aeb5b739567045bc919563c01df3f57b96f894a73f7bde5348e01757b0621342","emulator":"openMSX-Geo3D","mapper":"Normal","screen":"5","status":"demo","controls":"SPACE: カメラ停止／再開。左右: 経路位置変更。4コマ看板"},
     {"id":"geo3d-city-sc8-z80","cpu":"Z80","title":"Geo3D街並み・Z80・SCREEN 8","file":"geo3d-city-sc8-z80/GEO3D_CITY_SC8_Z80.ROM","bytes":65536,"sha256":"8e163ffb59a31154818c787b376c76cb2ffa6259aef4c3b8c2538a9b57918a2f","emulator":"openMSX-Geo3D","mapper":"ASCII16","screen":"8","status":"demo","controls":"SPACE: カメラ停止／再開。左右: 経路位置変更。停止中も看板は動作"},
@@ -24,6 +26,8 @@
     {"id":"geo3d-mesh-snake-z80","cpu":"Z80","title":"Geo3Dメッシュモーフィング・蛇・Z80","file":"geo3d-mesh-snake-z80/GEO_SNAKE_Z80.ROM","bytes":131072,"sha256":"0c4fb4d6eeca199bac2c65ecbbeb6c9a5a9e3c5aefd205e6db9377498c6d56a1","emulator":"openMSX-Geo3D","mapper":"ASCII16","screen":"8","status":"demo","controls":"SPACE: 一時停止／再開。停止中の左右: 経路位置を1段階移動"},
     {"id":"paper-dance-2d-z80","cpu":"Z80","title":"Paper Dance 2D・Z80","file":"paper-dance-2d-z80/PAPER_DANCE_Z80.ROM","bytes":2097152,"sha256":"d39a414c087cb5e5b9a1107e4338c2b7573efbadaf36b5df81d2b6a7d99221bb","emulator":"openMSX-Geo3D","mapper":"ASCII16","screen":"8","status":"demo","controls":"SPACE: 一時停止／再開。約39.4秒の2Dダンスをループ"},
     {"id":"geo3d-a1st-z80","cpu":"Z80","title":"FS-A1ST写真テクスチャー・Z80・SCREEN 5","file":"geo3d-a1st-z80/GEO3D_A1ST_Z80.ROM","bytes":65536,"sha256":"b75ef1f6056c84f3c02a3d32ea137d1ddf6e60493a6036503cce62a0e324348a","emulator":"blueMSX+","mapper":"ASCII16","screen":"5","status":"build-verified","controls":"左右: 水平回転、上下: 垂直回転、Shift+上下: 拡大縮小、SPACE: 自動／手動"},
-    {"id":"geo3d-a1st-sc8-z80","cpu":"Z80","title":"FS-A1ST写真テクスチャー・Z80・SCREEN 8","file":"geo3d-a1st-sc8-z80/GEO3D_A1ST_SC8_Z80.ROM","bytes":131072,"sha256":"5a2bab40901a7d99a2ba28008e0ea683e85bbe2de26efb360f40f9db598159d9","emulator":"blueMSX+","mapper":"ASCII16","screen":"8","status":"demo","controls":"左右: 水平回転、上下: 垂直回転、Shift+上下: 拡大縮小、SPACE: 自動／手動"}
+    {"id":"geo3d-a1st-sc8-z80","cpu":"Z80","title":"FS-A1ST写真テクスチャー・Z80・SCREEN 8","file":"geo3d-a1st-sc8-z80/GEO3D_A1ST_SC8_Z80.ROM","bytes":131072,"sha256":"5a2bab40901a7d99a2ba28008e0ea683e85bbe2de26efb360f40f9db598159d9","emulator":"blueMSX+","mapper":"ASCII16","screen":"8","status":"demo","controls":"左右: 水平回転、上下: 垂直回転、Shift+上下: 拡大縮小、SPACE: 自動／手動"},
+    {"id":"geo3d-f1xd-z80","cpu":"Z80","title":"HB-F1XD写真テクスチャー・Z80・SCREEN 5","file":"geo3d-f1xd-z80/GEO3D_F1XD_Z80.ROM","bytes":65536,"sha256":"d9ad30c9709f755eea4d1b1b160f86ed2e9377e99c9354c7114b28f3d38cb910","emulator":"blueMSX+","mapper":"ASCII16","screen":"5","status":"demo","controls":"左右: 水平回転、上下: 垂直回転、Shift+上下: 拡大縮小、SPACE: 自動／手動"},
+    {"id":"geo3d-f1xd-sc8-z80","cpu":"Z80","title":"HB-F1XD写真テクスチャー・Z80・SCREEN 8","file":"geo3d-f1xd-sc8-z80/GEO3D_F1XD_SC8_Z80.ROM","bytes":131072,"sha256":"be86fcf84a8f4eee0c84c4554e638ed8f9e750fe6e6e97ad620239fb3f0ccbf5","emulator":"blueMSX+","mapper":"ASCII16","screen":"8","status":"demo","controls":"左右: 水平回転、上下: 垂直回転、Shift+上下: 拡大縮小、SPACE: 自動／手動"}
   ]
 }
